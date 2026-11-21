@@ -1,0 +1,16 @@
+.gradle/
+build/
+out/
+bin/
+/BExport.jar
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+.vscode/
+*.log
+hs_err_pid*
+replay_pid*

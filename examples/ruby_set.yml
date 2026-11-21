@@ -1,0 +1,88 @@
+# Example BExport armor-set YAML (structure only).
+# Generate a live file with /bexport exportarmor <name>.
+
+name: ruby_set
+type: ARMOR_SET
+exported-at: "2026-11-21T00:00:00Z"
+exported-by: Admin
+paper-bytes-set:
+  api: org.bukkit.inventory.ItemStack#serializeItemsAsBytes()
+  encoding: java.util.Base64
+  slot-order:
+    - helmet
+    - chestplate
+    - leggings
+    - boots
+  validated: true
+  base64: generate-me-in-game
+pieces:
+  helmet:
+    present: true
+    itemsadder:
+      present: true
+      namespaced-id: ruby:ruby_helmet
+      namespace: ruby
+      id: ruby_helmet
+      source: itemsadder-api
+    item-info:
+      material: NETHERITE_HELMET
+      amount: 1
+    paper-bytes:
+      api: org.bukkit.inventory.ItemStack#serializeAsBytes()
+      encoding: java.util.Base64
+      validated: true
+      base64: generate-me-in-game
+  chestplate:
+    present: true
+    itemsadder:
+      present: true
+      namespaced-id: ruby:ruby_chestplate
+      namespace: ruby
+      id: ruby_chestplate
+      source: itemsadder-api
+    item-info:
+      material: NETHERITE_CHESTPLATE
+      amount: 1
+    paper-bytes:
+      api: org.bukkit.inventory.ItemStack#serializeAsBytes()
+      encoding: java.util.Base64
+      validated: true
+      base64: generate-me-in-game
+  leggings:
+    present: true
+    itemsadder:
+      present: true
+      namespaced-id: ruby:ruby_leggings
+      namespace: ruby
+      id: ruby_leggings
+      source: itemsadder-api
+    item-info:
+      material: NETHERITE_LEGGINGS
+      amount: 1
+    paper-bytes:
+      api: org.bukkit.inventory.ItemStack#serializeAsBytes()
+      encoding: java.util.Base64
+      validated: true
+      base64: generate-me-in-game
+  boots:
+    present: true
+    itemsadder:
+      present: true
+      namespaced-id: ruby:ruby_boots
+      namespace: ruby
+      id: ruby_boots
+      source: itemsadder-api
+    item-info:
+      material: NETHERITE_BOOTS
+      amount: 1
+    paper-bytes:
+      api: org.bukkit.inventory.ItemStack#serializeAsBytes()
+      encoding: java.util.Base64
+      validated: true
+      base64: generate-me-in-game
+skcrates:
+  verified-ingame-command: /crates edit
+  do-not-invent-keys: true
+  notes:
+    - Add each armor piece as its own SK Crates reward with /crates edit.
+    - SK Crates has no documented bundled armor-set reward type.

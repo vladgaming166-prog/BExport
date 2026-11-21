@@ -1,0 +1,28 @@
+name: BExport
+version: ${version}
+main: network.blazemc.bexport.BExportPlugin
+api-version: "1.21"
+folia-supported: true
+author: BlazeMC Network
+authors:
+  - BlazeMC Network
+description: Export ItemsAdder custom items and armor into Base64-encoded data for crate reward configurations.
+website: https://github.com/vladgaming166-prog/BExport
+prefix: BExport
+softdepend:
+  - ItemsAdder
+  - SKCrates
+  - SK-Crates
+  - skCrates
+
+commands:
+  bexport:
+    description: Export ItemsAdder items and armor to Base64 files.
+    usage: /<command> [export|exportarmor|reload|help]
+    permission: bexport.admin
+    aliases: [bex]
+
+permissions:
+  bexport.admin:
+    description: Allows all BExport administration commands.
+    default: op

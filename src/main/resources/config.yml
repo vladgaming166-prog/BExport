@@ -1,0 +1,35 @@
+# =============================================================================
+# BExport — BlazeMC Network
+# Export ItemsAdder custom items and armor to Base64 for crate configurations.
+# =============================================================================
+
+settings:
+  # Re-deserialize every export and refuse to write files if the round-trip fails.
+  validate-exports: true
+  # Inspect an installed SK Crates plugin (if present) and record its real item format.
+  detect-skcrates: true
+  # Folder under plugins/BExport/ where .yml and .txt files are written.
+  exports-folder: exports
+
+messages:
+  prefix: "<dark_gray>[<gold>BExport</gold>]</dark_gray> "
+  no-permission: "<red>You do not have permission to use BExport."
+  player-only: "<red>That command can only be used in-game."
+  usage:
+    - "<gold>BExport</gold> <gray>—</gray> ItemsAdder Base64 exporter"
+    - "<yellow>/bexport export <name></yellow> <gray>—</gray> export the item in your main hand"
+    - "<yellow>/bexport exportarmor <name></yellow> <gray>—</gray> export your equipped armor set"
+    - "<yellow>/bexport reload</yellow> <gray>—</gray> reload this configuration"
+  invalid-name: "<red>Invalid export name '<white><name></white>'. Use 1-64 letters, digits, underscore, dash or dot."
+  empty-hand: "<red>Hold an item in your main hand first."
+  empty-armor: "<red>You are not wearing any armor."
+  export-success: "<green>Exported <white><name></white> as a <white><type></white>."
+  export-files: "<gray>Download from File Manager:</gray>"
+  export-file-line: "<dark_gray>-</dark_gray> <aqua><path></aqua>"
+  not-itemsadder: "<yellow>This item is not an ItemsAdder custom item. The full ItemStack was still exported."
+  itemsadder-id: "<gray>ItemsAdder ID:</gray> <white><id></white>"
+  validation-failed: "<red>Export aborted: the Base64 data could not be deserialized back into the original item."
+  io-error: "<red>Export aborted: could not write files. Check the server log."
+  reload-success: "<green>BExport configuration reloaded."
+  skcrates-detected: "<gray>SK Crates detected as <white><plugin></white> (<white><format></white>)."
+  skcrates-missing: "<gray>SK Crates is not installed. The export still includes a verified usage guide."

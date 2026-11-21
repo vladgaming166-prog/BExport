@@ -1,0 +1,49 @@
+# Example BExport YAML (structure only).
+# The Base64 value below is a placeholder. Always generate a live export
+# with /bexport export <name> on Paper 1.21.11 or 26.2 so serializeAsBytes()
+# matches your server's data version.
+#
+# This file shows the fields BExport writes for a custom ItemsAdder sword.
+
+name: ruby_sword
+type: SINGLE_ITEM
+exported-at: "2026-11-21T00:00:00Z"
+exported-by: Admin
+itemsadder:
+  present: true
+  namespaced-id: ruby:legendary_sword
+  namespace: ruby
+  id: legendary_sword
+  source: itemsadder-api
+  block: false
+  custom-durability: false
+item-info:
+  material: NETHERITE_SWORD
+  amount: 1
+  display-name-plain: Legendary Ruby Sword
+  enchantments:
+    minecraft:sharpness: 5
+    minecraft:unbreaking: 3
+  persistent-data:
+    - key: itemsadder:id
+      value: ruby:legendary_sword
+paper-bytes:
+  api: org.bukkit.inventory.ItemStack#serializeAsBytes()
+  encoding: java.util.Base64
+  validated: true
+  sha256: generate-me-in-game
+  base64: generate-me-in-game
+bukkit-itemstack:
+  ==: org.bukkit.inventory.ItemStack
+  type: NETHERITE_SWORD
+  amount: 1
+skcrates:
+  plugin-present: false
+  detected-format: not-installed
+  verified-ingame-command: /crates edit
+  itemsadder-give-command: iagive %player% ruby:legendary_sword 1
+  do-not-invent-keys: true
+  notes:
+    - SK Crates was not found among loaded plugins.
+    - Public SK Crates documentation states the plugin is built against the Spigot API and that rewards are added in-game with /crates edit.
+    - BExport therefore does not invent a Base64 config key.
